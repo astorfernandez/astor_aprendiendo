@@ -1,8 +1,8 @@
-from dates.DateUtils import DateUtils
-from strings.StringUtils import StringUtils
-from files.FileUtils import FileUtils
-from exchange_rate.ExchangeRateUtils import ExchangeRateUtils
-from Constants import OUTPUT_PATH
+from ticket.dates.DateUtils import DateUtils
+from ticket.strings.StringUtils import StringUtils
+from ticket.files.FileUtils import FileUtils
+from ticket.exchange_rate.ExchangeRateUtils import ExchangeRateUtils
+from ticket.Constants import OUTPUT_PATH
 
 
 class Ticket:

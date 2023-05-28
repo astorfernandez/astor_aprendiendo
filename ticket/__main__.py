@@ -1,8 +1,7 @@
 from ticket.Ticket import Ticket
 
 
-if __name__ == '__main__':
-
+def main():
     pedido = list()
 
     pedido.append({
@@ -27,3 +26,5 @@ if __name__ == '__main__':
     ticket.imprimir_ticket(pedido)
 
 
+if __name__ == "__main__":
+    main()

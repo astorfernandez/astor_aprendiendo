@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ticket"
+authors = [
+    {name = "Josiah Carberry", email = "josiah_carberry@brown.edu"},
+]
+description = "My package description"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["one", "two"]
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "requests==2.30.0",
+    "http_client",
+]
+dynamic = ["version"]
+
+[project.scripts]
+ticket = "ticket.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+   # "black[d]~=23.1.0",
+    #"invoke~=2.0.0",
+    #"isort~=5.12.0",
+    #"ruff~=0.0.263",
+    #"mypy~=1.1.1",
+    #"pre-commit~=2.20.0",
+    #"types-PyYAML~=6.0.8",
+    #"types-setuptools~=65.3",
+    "pytest~=7.2.0",
+    #"pytest-cov~=4.0.0",
+    #"tomli~=2.0.1",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+# --strict-markers means the markers have to be defined in this file before use, which prevents mispellings.
+# --strict-config means that any warnings encountered while parsing the `pytest`configuration file will raise errors.
+# -ra: show extra test data.
+addopts = "-ra --strict-markers --strict-config"
+
+python_files = "test_*.py"
+python_classes = "Test_"
+python_functions = "test_*"
+
+
+# Look up "Testing Pyramid" for more insight into these markers.
+markers = [
+    "unit: The test is a unit test and is thus expected to be fast with little setup",
+    "integration: The test is an integration test and is thus expected to be somewhat slower with a little more setup",
+    "functional: The test is a functional test and is thus expected to be slower with greater setup",
+]
+filterwarnings = [
+
+    'ignore:distutils Version classes are deprecated:DeprecationWarning:apispec'
+]

@@ -1,6 +1,6 @@
-from files.FileUtils import FileUtils
-from Constants import INPUT_PATH
-from http.HttpUtils import HttpUtils
+from ticket.files.FileUtils import FileUtils
+from ticket.Constants import INPUT_PATH
+from ticket.http_utils.HttpUtils import HttpUtils
 
 
 EXCHANGE_RATE_MODE = 'HTTP'  # Available modes: HTTP, FILE

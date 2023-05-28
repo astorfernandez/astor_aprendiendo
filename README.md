@@ -6,21 +6,40 @@ This project is a general purpose container to run shell scripts and python3 scr
 ## To run tests
 In `/dk` path, clone or pull repos `DKAnalyticContainer` and `AnalyticContainer`:
 ``` bash
-cd C:\Users\Astor\PycharmProjects\Aprendiendo
-run_tests.bat
+
+
+to run tests:
+the unit tests open the Terminal and run "pytest -m unit" 
+the integration tests open the Terminal and run "pytest -m integration"
+all tests open the Terminal and run "pytest"
+
+ 
 ```
 ## To run project
-_HOLA_
+debug mode:
+``` bash
+pip install .[dev]
+
+``` 
+production mode:
+``` bash
+pip install .
+ticket
+``` 
 
 ## To do list
-completar el test de TestTicket:
-que consiste en terminar de testear
-y armar otro caso de test distinto con otros productos, cantidades, precios y totales
-completar  y emrolijar le ReadMe.
-
-Papa:
-cuando corra el test imprimir el nombre del test.
-herencia
+(OK) configurar el proyecto para que descargue las dependencias
+(OK) cambiar todos los Tests para que se parezcan al test_dummie
+(OK) refactorear los tests para que sean del tip pytest
+(OK) Completar la documentacion de como hacer los tests.
+() Solucionar error main
+() completar la documentacion de como correr el programa
+() implementar el test coverage
+() completar el test de TestTicket:
+() que consiste en terminar de testear  y armar otro caso de test distinto con otros productos, cantidades, precios y totales
+() completar  y emrolijar le ReadMe.
+() cuando corra el test imprimir el nombre del test.
+() herencia
 
 ## Changelog
 
@@ -82,7 +101,7 @@ Example:
       "DKCloudCommand", "boxsdk[jwt]"
     ],
     "keys": {
-        ...
+        
     }
 }
 ```

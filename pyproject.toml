@@ -26,7 +26,7 @@ ticket = "ticket.__main__:main"
 
 [project.optional-dependencies]
 dev = [
-   # "black[d]~=23.1.0",
+    #"black[d]~=23.1.0",
     #"invoke~=2.0.0",
     #"isort~=5.12.0",
     #"ruff~=0.0.263",
@@ -35,8 +35,9 @@ dev = [
     #"types-PyYAML~=6.0.8",
     #"types-setuptools~=65.3",
     "pytest~=7.2.0",
-    #"pytest-cov~=4.0.0",
+    "pytest-cov~=4.0.0",
     #"tomli~=2.0.1",
+    #"curl --curl-dir=C:\\Windows\\System32\\curl.exe",
 ]
 
 [tool.pytest.ini_options]
@@ -61,3 +62,20 @@ filterwarnings = [
 
     'ignore:distutils Version classes are deprecated:DeprecationWarning:apispec'
 ]
+
+# See: https://coverage.readthedocs.io/en/latest/config.html
+[tool.coverage.run]
+branch=true
+# Every time there is a new top-level module, this will need to be expanded.
+source = [
+    "ticket",
+]
+
+[tool.coverage.report]
+# We don't need to report the coverage lines on tests
+omit = [
+    "*/test/*",
+    "ticket/__main__.py"
+]
+# This skips _init_.py and other empty files.
+skip_empty=true

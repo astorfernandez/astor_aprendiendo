@@ -1,10 +1,10 @@
 # Project Description
 
 ## Description
-This project is a general purpose container to run shell scripts and python3 scripts.
+This project is to print Tickets.
 
 ## To run tests
-In `/dk` path, clone or pull repos `DKAnalyticContainer` and `AnalyticContainer`:
+
 ``` bash
 
 
@@ -13,10 +13,14 @@ the unit tests open the Terminal and run "pytest -m unit"
 the integration tests open the Terminal and run "pytest -m integration"
 all tests open the Terminal and run "pytest"
 
+tests with coverage:
+pytest --cov --cov-report html
+
+
  
 ```
 ## To run project
-debug mode:
+development mode:
 ``` bash
 pip install .[dev]
 
@@ -32,9 +36,11 @@ ticket
 (OK) cambiar todos los Tests para que se parezcan al test_dummie
 (OK) refactorear los tests para que sean del tip pytest
 (OK) Completar la documentacion de como hacer los tests.
-() Solucionar error main
-() completar la documentacion de como correr el programa
-() implementar el test coverage
+(OK) Solucionar error main
+(OK) completar la documentacion de como correr el programa
+(OK) implementar el test coverage
+() Hacer test exchange rate
+() Mock en el test exhange rate
 () completar el test de TestTicket:
 () que consiste en terminar de testear  y armar otro caso de test distinto con otros productos, cantidades, precios y totales
 () completar  y emrolijar le ReadMe.

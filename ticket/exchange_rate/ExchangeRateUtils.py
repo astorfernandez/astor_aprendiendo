@@ -8,10 +8,13 @@ EXCHANGE_RATE_MODE = 'HTTP'  # Available modes: HTTP, FILE
 
 class ExchangeRateUtils:
 
+    def get_exchange_rate_mode(self):
+        return EXCHANGE_RATE_MODE
+
     def get_exchange_rate(self, currency):
-        if EXCHANGE_RATE_MODE == 'HTTP':
+        if self.get_exchange_rate_mode() == 'HTTP':
             return self.get_exchange_rate_http_mode(currency)
-        elif EXCHANGE_RATE_MODE == 'FILE':
+        elif self.get_exchange_rate_mode() == 'FILE':
             return self.get_exchange_rate_file_mode(currency)
         else:
             error_message = f"unsoported exchange rate mode: {currency}"

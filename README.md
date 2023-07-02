@@ -3,6 +3,15 @@
 ## Description
 This project is to print Tickets.
 
+## Git
+
+git status
+git pull
+
+git status
+
+
+
 ## To run tests
 
 ``` bash
@@ -16,8 +25,7 @@ all tests open the Terminal and run "pytest"
 tests with coverage:
 pytest --cov --cov-report html
 
-
- 
+coverage report: c:\astor\repo\astor_aprendiendo\htmlcov\
 ```
 ## To run project
 development mode:

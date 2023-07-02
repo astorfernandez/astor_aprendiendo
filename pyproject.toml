@@ -38,6 +38,7 @@ dev = [
     "pytest-cov~=4.0.0",
     #"tomli~=2.0.1",
     #"curl --curl-dir=C:\\Windows\\System32\\curl.exe",
+    "response==0.23.1",
 ]
 
 [tool.pytest.ini_options]

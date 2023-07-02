@@ -4,13 +4,21 @@
 This project is to print Tickets.
 
 ## Git
-
+pull
+```
 git status
 git pull
+```
 
+push
+```
 git status
-
-
+alt+9
+head(current Branch)[boton derecho] show diff with working tree
+git add -A 
+git commit -m "improve the test coverage"
+git push
+```
 
 ## To run tests
 

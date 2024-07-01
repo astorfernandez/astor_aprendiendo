@@ -4,231 +4,231 @@ from ticket.strings.StringUtils import StringUtils
 
 
 @pytest.mark.unit
-def test_texto_centrado_001():
+def centred_text_test001():
     string_utils = StringUtils()
-    texto = 'hola'
-    cant_caracteres = 6
-    results = string_utils.texto_centrado(texto, cant_caracteres)
-    assert ' hola ' == results
+    text = 'hello'
+    char_amount = 6
+    results = string_utils.centred_text(text, char_amount)
+    assert ' hello ' == results
 
 
 @pytest.mark.unit
-def test_texto_centrado_002():
+def centred_text_test002():
     # prep
     string_utils = StringUtils()
-    texto = 'hola'
-    cant_caracteres = 4
+    text = 'hello'
+    char_amount = 4
     # run
-    results = string_utils.texto_centrado(texto, cant_caracteres)
+    results = string_utils.centred_text(text, char_amount)
     # results
-    assert 'hola' == results
+    assert 'hello' == results
 
 
 @pytest.mark.unit
-def test_texto_centrado_003():
-    # prep
-    string_utils = StringUtils()
-    texto = None
-    cant_caracteres = 4
-    # run
-    results = string_utils.texto_centrado(texto, cant_caracteres)
-    # results
-    assert (results is None)
-
-
-@pytest.mark.unit
-def test_texto_centrado_004():
-    # prep
-    string_utils = StringUtils()
-    texto = 'hola'
-    cant_caracteres = 7
-
-    # run
-    results = string_utils.texto_centrado(texto, cant_caracteres)
-
-    # results
-    assert '  hola ' == results
-
-
-@pytest.mark.unit
-def test_texto_centrado_005():
-    # prep
-    string_utils = StringUtils()
-    texto = 'hola'
-    cant_caracteres = 8
-
-    # run
-    results = string_utils.texto_centrado(texto, cant_caracteres)
-
-    # results
-    assert '  hola  ' == results
-
-
-@pytest.mark.unit
-def test_cortar_texto_001():
-    # prep
-    string_utils = StringUtils()
-    text = '  hola  '
-    cant_max = 7
-
-    # run
-    results = string_utils.cortar_texto(text, cant_max)
-
-    # results
-    assert '  hola ' == results
-
-
-@pytest.mark.unit
-def test_cortar_texto_002():
+def centred_text_test003():
     # prep
     string_utils = StringUtils()
     text = None
-    cant_max = 4
+    char_amount = 4
+    # run
+    results = string_utils.centred_text(text, char_amount)
+    # results
+    assert (results is None)
+
+
+@pytest.mark.unit
+def centred_text_test004():
+    # prep
+    string_utils = StringUtils()
+    text = 'hello'
+    char_amount = 7
 
     # run
-    results = string_utils.cortar_texto(text, cant_max)
+    results = string_utils.centred_text(text, char_amount)
+
+    # results
+    assert '  hello ' == results
+
+
+@pytest.mark.unit
+def centred_text_test005():
+    # prep
+    string_utils = StringUtils()
+    text = 'hello'
+    char_amount = 8
+
+    # run
+    results = string_utils.centred_text(text, char_amount)
+
+    # results
+    assert '  hello  ' == results
+
+
+@pytest.mark.unit
+def cut_text_test_001():
+    # prep
+    string_utils = StringUtils()
+    text = '  hello  '
+    max_char = 7
+
+    # run
+    results = string_utils.cut_text(text, max_char)
+
+    # results
+    assert '  hello ' == results
+
+
+@pytest.mark.unit
+def cut_text_test_002():
+    # prep
+    string_utils = StringUtils()
+    text = None
+    max_char = 4
+
+    # run
+    results = string_utils.cut_text(text, max_char)
 
     # results
     assert (results is None)
 
 
 @pytest.mark.unit
-def test_cortar_texto_003():
+def cut_text_test_003():
     # prep
     string_utils = StringUtils()
-    text = 'hola'
-    cant_max = 3
+    text = 'hello'
+    max_char = 3
 
     # run
-    results = string_utils.cortar_texto(text, cant_max)
+    results = string_utils.cut_text(text, max_char)
 
     # results
-    assert ('hol' == results)
+    assert ('hell' == results)
 
 
 @pytest.mark.unit
-def test_cortar_texto_004():
+def cut_text_test_004():
     # prep
     string_utils = StringUtils()
-    text = '  hola  '
-    cant_max = 10
+    text = '  hello  '
+    max_char = 10
 
     # run
-    results = string_utils.cortar_texto(text, cant_max)
+    results = string_utils.cut_text(text, max_char)
 
     # results
-    assert ('  hola    ' == results)
+    assert ('  hello    ' == results)
 
 
 @pytest.mark.unit
-def test_justificar_texto_001():
+def justify_text_test_001():
     # prep
     string_utils = StringUtils()
-    text = 'hola'
-    cant_caracteres = 7
+    text = 'hello'
+    char_amount = 7
 
     # run
-    results = string_utils.justificar_texto(text, cant_caracteres)
+    results = string_utils.justify_text(text, char_amount)
 
     # results
-    assert ('   hola' == results)
+    assert ('   hello' == results)
 
 
 @pytest.mark.unit
-def test_justificar_texto_002():
+def justify_text_test_002():
     # prep
     string_utils = StringUtils()
-    text = 'holahola'
-    cant_caracteres = 8
+    text = 'hellohello'
+    char_amount = 8
 
     # run
-    results = string_utils.justificar_texto(text, cant_caracteres)
+    results = string_utils.justify_text(text, char_amount)
 
     # results
     assert (text == results)
 
 
 @pytest.mark.unit
-def test_justificar_texto_003():
+def justify_text_test_003():
     # prep
     string_utils = StringUtils()
-    text = 'holahola'
-    cant_caracteres = 7
+    text = 'hellohello'
+    char_amount = 7
 
     # run
     try:
-        string_utils.justificar_texto(text, cant_caracteres)
+        string_utils.justify_text(text, char_amount)
         assert False
     except Exception as e:
-        assert ('boludo' in str(e))
+        assert ('Error' in str(e))
 
 
 @pytest.mark.unit
-def test_justificar_texto_004():
+def justify_text_test_004():
     # prep
     string_utils = StringUtils()
     text = None
-    cant_caracteres = 4
+    char_amount = 4
 
     # run
-    results = string_utils.justificar_texto(text, cant_caracteres)
+    results = string_utils.justify_text(text, char_amount)
 
     # results
     assert (results is None)
 
 
 @pytest.mark.unit
-def test_normalizar_texto_001():
+def normalize_text_test_001():
     # prep
     string_utils = StringUtils()
-    text = 'hola'
-    cant_caracteres = 7
+    text = 'hello'
+    char_amount = 7
 
     # run
-    results = string_utils.normalizar_texto(text, cant_caracteres)
+    results = string_utils.normalize_text(text, char_amount)
 
     # results
-    assert ('hola   ' == results)
+    assert ('hello   ' == results)
 
 
 @pytest.mark.unit
-def test_normalizar_texto_002():
+def normalize_text_test_002():
     # prep
     string_utils = StringUtils()
-    text = 'holahola'
-    cant_caracteres = 8
+    text = 'hellohello'
+    char_amount = 8
 
     # run
-    results = string_utils.normalizar_texto(text, cant_caracteres)
+    results = string_utils.normalize_text(text, char_amount)
 
     # results
     assert (text == results)
 
 
 @pytest.mark.unit
-def test_normalizar_texto_003():
+def normalize_text_test_003():
     # prep
     string_utils = StringUtils()
-    text = 'holahola'
-    cant_caracteres = 7
+    text = 'hellohello'
+    char_amount = 7
 
     # run
     try:
-        string_utils.normalizar_texto(text, cant_caracteres)
+        string_utils.normalize_text(text, char_amount)
         assert False
     except Exception as e:
-        assert ('boludo' in str(e))
+        assert ('Error' in str(e))
 
 
 @pytest.mark.unit
-def test_normalizar_texto_004():
+def normalize_text_test_004():
     # prep
     string_utils = StringUtils()
     text = None
-    cant_caracteres = 4
+    char_amount = 4
 
     # run
-    results = string_utils.normalizar_texto(text, cant_caracteres)
+    results = string_utils.normalize_text(text, char_amount)
 
     # results
     assert (results is None)

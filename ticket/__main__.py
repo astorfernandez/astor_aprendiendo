@@ -2,28 +2,28 @@ from ticket.Ticket import Ticket
 
 
 def main():
-    pedido = list()
+    order = list()
 
-    pedido.append({
-        'producto': 'hamburguesa',
-        'cantidad': 3,
-        'precio_unitario': 100
+    order.append({
+        'product': 'burguer',
+        'amount': 3,
+        'unit_price': 100
     })
 
-    pedido.append({
-        'producto': 'pancho',
-        'cantidad': 2,
-        'precio_unitario': 20
+    order.append({
+        'product': 'hotdog',
+        'amount': 2,
+        'unit_price': 20
     })
 
-    pedido.append({
-        'producto': 'sundae',
-        'precio_unitario': 70
+    order.append({
+        'product': 'icecream',
+        'unit_price': 70
     })
 
     ticket = Ticket()
 
-    ticket.imprimir_ticket(pedido)
+    ticket.print_ticket(order)
 
 
 if __name__ == "__main__":

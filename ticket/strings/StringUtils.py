@@ -1,59 +1,59 @@
 class StringUtils:
 
-    def texto_centrado(self, texto, cant_caracteres):
-        if not texto:
-            return texto
+    def centred_text(self, text, character_amount):
+        if not text:
+            return text
 
-        ret = texto
-        while len(ret) < cant_caracteres:
+        ret = text
+        while len(ret) < character_amount:
             ret = ' ' + ret + ' '
 
-        if len(ret) > cant_caracteres:
-            ret = ret[0:cant_caracteres]
+        if len(ret) > character_amount:
+            ret = ret[0:character_amount]
         return ret
 
-    def cortar_texto(self, text, cant_max):
+    def cut_text(self, text, max_char):
         """
-        Funcion que corta hasta cant_max el texto de entrada text
+        Function that cuts up to max_char the input text
 
-        entrada                 ->  salida
-        ------------------------------------------
-        'hola'                  -> 'hola            '
-        '01234567890123456789'  -> '0123456789012345'
+        input                    ->     output
+        -----------------------------------------------
+        'hello'                  -> 'hello            '
+        '01234567890123456789'   -> '0123456789012345'
         """
         ret = text
         if ret is None:
             return ret
 
-        if len(ret) == cant_max:
+        if len(ret) == max_char:
             return ret
 
-        if len(ret) > cant_max:
-            return ret[0:cant_max]
+        if len(ret) > max_char:
+            return ret[0:max_char]
 
-        while len(ret) < cant_max:
+        while len(ret) < max_char:
             ret = ret + ' '
 
         return ret
 
-    def justificar_texto(self, texto, cant_caracteres):
-        ret = texto
+    def justify_text(self, text, character_amount):
+        ret = text
         if ret is None:
             return ret
-        if len(ret) > cant_caracteres:
-            mensaje = 'la cagaste boludo'
-            raise Exception(mensaje)
-        while len(ret) < cant_caracteres:
+        if len(ret) > character_amount:
+            message = 'Error'
+            raise Exception(message)
+        while len(ret) < character_amount:
             ret = ' ' + ret
         return ret
 
-    def normalizar_texto(self, texto, cant_caracteres):
-        ret = texto
+    def normalize_text(self, text, character_amount):
+        ret = text
         if ret is None:
             return ret
-        if len(ret) > cant_caracteres:
-            mensaje = 'la cagaste boludo'
-            raise Exception(mensaje)
-        while len(ret) < cant_caracteres:
+        if len(ret) > character_amount:
+            message = 'Error'
+            raise Exception(message)
+        while len(ret) < character_amount:
             ret = ret + ' '
         return ret

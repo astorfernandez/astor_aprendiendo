@@ -61,7 +61,7 @@ ticket
 
 ### 1.0.1 - 2023-05-28
 * Refactor to use py test
-* 
+
 ### 1.0.1 - 2023-04-22
 * git ignore of pycharm
 
